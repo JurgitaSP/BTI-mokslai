@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <!-- ivesties laukeliu reiksmiu pasiekimas
      praktikuotis manipuliaciju duomenis
@@ -13,10 +15,16 @@
      pasikartojimas f-j veikimo-->
 
 
-<input type="text" id="vardo-ivestis" placeholder="Iveskite savo varda"/> 
-<button onclick="getName()">Gauti reiksme i JS</button>
+    <input type="text" id="vardo-ivestis" placeholder="Iveskite savo varda" />
+    <input type="number" id="amziaus-ivestis" placeholder="Iveskite savo amziu" />
+    <div><label for="terms">Sutinku su Taisyklemis ir salygomis</label>
+   <input type="checkbox"  id="terms"></div>
+    
+    <button onclick="getFormData()">Gauti reiksme i JS</button>
 
-    <script src="./script.js"></script>
 
+    <!-- <script src="./script.js"></script> -->
+    <script src="./index.js"></script>
 </body>
+
 </html>

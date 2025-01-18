@@ -10,22 +10,28 @@
 
 <body>
     <h2>Registracijos forma</h2>
-    <div><label for="">Vardas</label>
+    <div><label for="name">Vardas</label>
 
-        <input type="text" id="name">
+        <input type="text" id="name" placeholder="Iveskite savo varda">
     </div>
-    <div><label for="">Pavarde</label>
-        <input type="text" id="lastName">
+    <br>
+    <div><label for="lastName">Pavarde</label>
+        <input type="text" id="lastName" placeholder="Iveskite savo pavarde">
     </div>
-    <div><label for="">Gimimo data</label>
-        <input type="date"  id="birhtday">
+    <br>
+    <div><label for="birhtday">Gimimo data</label>
+        <input type="date" id="birhtday">
     </div>
-    <div><label for="">Elektroninis pastas</label>
-        <input type="email"  id="email">
+    <br>
+    <div><label for="email">Elektroninis pastas</label>
+        <input type="email" id="email" placeholder="Iveskite savo email adresa">
     </div>
-    <div><label for="Sutikimas"></label>
+    <br>
+    <div><label for="isConfirm">Ar sutinkate su salygomis ir taisyklemis?</label>
         <input type="checkbox" id="isConfirm">
     </div>
+    <br>
+    <button onclick="getFormData()">Confirm</button>
 
 
 

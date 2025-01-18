@@ -52,3 +52,5 @@ rezultatas = String(rezultatas);
 console.log(typeof rezultatas);
 }
 //rezultatas = "" + rezultatas;
+// rezultatas = rezultatas.toFixed(3) - neti pavercia 
+//number i string, bet kiek skaiciu po kablelio rodyti
