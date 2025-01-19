@@ -69,6 +69,7 @@ console.log(tekstas.charAt(tekstas.length - 1));
 // replace -pakeicia tam tikras raides, sekas
 // pakeicia tik pirmaji raktazodi
 
+// tekstas.replace("{name}", "Lola" - rodys orginalu teksta, truksta =
 tekstas = (tekstas.replace("{name}", "Lola"));
 console.log(tekstas);
 
@@ -81,15 +82,19 @@ console.log(tekstas);
 // orginalus tekstas
 let tekstas2 = "obuoliu pyragas";
 // teksto dalis iskirpta, nurodzius tik viena paratmetra, nukirpta 
-// bus pradzia iki sito parameetro
-let tekstoDalis = tekstas2.slice(3, 6);
+// bus pradzia iki sito parametro
+let tekstoDalis = tekstas2.slice(3, 6);//iskerpama nuo 3 iki 6, 3reiksme iseina, 6 jau ne
 console.log(tekstoDalis);
+
+let tekstas8 = "obuolys, bananas, kivi";
+let part = tekstas8.slice(7);
+console.log(part);//lieka bananas, kivi
 
 // pateikus pirmaji parametra kaip negatyvu nukerpami simboliai nuo galo
 //(-4) rezultatas keturi paskutiniai simboliai
 // dvi neigiamos reiksmes iskerpa dali teksto nuo galo
 let tekstas3 = "sausainis, sokoladas";
-let tekstoDalis2 = tekstas3.slice(-7, -3);
+let tekstoDalis2 = tekstas3.slice(-7, -3);//kola //-3 neieina
 console.log(tekstoDalis2);
 
 // raidziu padidinimas/mazinimas
@@ -105,3 +110,56 @@ function capitalize(tekst){
    return tekst.replace(tekst[0], tekst[0].toUpperCase());
 }
 console.log(capitalize("viena karta"));
+
+//teksto paieskos metodai:
+//indexOf() -ieskoti teksto indexo tekste
+//lastIndexOf()-iesko nuo teksto galo
+//includes() -iesko teksto tekste, bet grzina true arba false
+// startWith()-ar prasideda su(...)
+// endsWith()-ar pasibaigia su (...)
+
+let tekstas10 = "viena karta girioje...";
+console.log(tekstas10);
+//indexOf() -ieskoti teksto indexo tekste
+let pozicija = tekstas10.indexOf("karta");//iesko visame tekste, neradus atiduoda -1, 
+// radus- to simbolio pozicija
+console.log(pozicija);
+if(tekstas10.indexOf("karta") != -1){
+    console.log("Tekstas 'karta' buvo atrastas");
+    }
+    else {
+        console.log('Tekstas "karta" nebuvo atrastas');
+    }
+
+    let tekstas7 = "Musu salis yra Lietuva";
+    if (tekstas7.includes("Lietuva")){
+        console.log("Mes esam lietuviai");
+    }
+    else if (tekstas7.includes("Lenkija")){
+        console.log("Mes esam lenkai");
+    }
+    else {
+        console.log("Mes nezinome, kas mes esame")
+    }
+
+    let arLietuviai = tekstas7.includes('Lietuva');//true/false
+if (arLietuviai){
+    console.log("Mes esam lietuviai");
+}
+else {
+    console.log("Mes ne esame lieuviai");
+}
+console.log(arLietuviai);
+
+// startsWith()-ar prasideda su(...)
+// endsWith()-ar pasibaigia su (...)
+
+
+if(tekstas7.startsWith("jusu")){
+    console.log("Mes esam lietuviai");
+}
+else {
+    console.log("Jus esate lietuviai");
+}
+
+console.log(arLietuviai);
