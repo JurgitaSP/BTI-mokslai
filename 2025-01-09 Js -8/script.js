@@ -117,8 +117,9 @@ console.log(colors.join(", "));
 //   'Karen', 'Liam', 'Mia', 'Nathan', 'Olivia', 
 //   'Peter', 'Quinn', 'Rachel', 'Sophia', 'Tom'
 // ]
- 
-
+ let tekstas = 'Alice_ . _Bob_ . _Charlie_ . _David_ . _Eve_ . _Frank_ . _Grace_ . _Hannah_ . _Isaac_ . _Jack_ . _Karen_ . _Liam_ . _Mia_ . _Nathan_ . _Olivia_ . _Peter_ . _Quinn_ . _Rachel_ . _Sophia_ . _Tom'
+const employees = tekstas.split('_ . _');
+console.log(employees);
 
 // 8. Sukurkite funknciją createHtmlList(masyvas), kuri kuria HTML kodą. 
 // Kuriamas sunumeruotas sąrašas iš visų masyve esančių elementų. Raskite būdą, 
