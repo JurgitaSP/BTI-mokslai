@@ -1,7 +1,7 @@
 //masyvas = array
 //masyvai - kintamieji, savyje turintys daug kintamuju, kintamuju rinkiniai
 //prie masyvu naudoti const, jos tipas nesikeicia 
-const masinos = ["Opel", "Audi", "Volvo", 4, "BWM"];
+const masinos = ["Opel", "Audi", "Volvo", "BWM"];
 console.log(masinos); //audi
 console.log(masinos.length);//masyvo kintamuju sk
 console.log(masinos[2].length); //parodo antro kintamojo ilgi is simboliu
@@ -96,3 +96,7 @@ if (masinos.join(",").toLowerCase().split(",").includes("suzuki")){
 else{
     console.log("Masyve nera Suzuki");
 }
+
+//masyvas.indexOf() - atiduoda masyvo indeksa, kuris nurodytas parametruose
+console.log(masinos);
+console.log(masinos.indexOf("Suzuki"));//jei grazina -1, vadinasi nerasta
