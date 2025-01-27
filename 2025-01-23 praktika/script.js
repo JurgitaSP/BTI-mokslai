@@ -105,14 +105,18 @@ console.log(masyvas5);
 //  getLastItem([true, false, true]) ➞ true
 
 function getLastItem(masyvas5){
-   return (masyvas5.length -1);
+   return masyvas5[masyvas5.length -1];
 }
-console.log(getLastItem(masyvas5.length -1)); //nebaigtas
+console.log(getLastItem([1, 8, "buy", 98, "yes"])); 
 
 
 //  7. Parašykite f-ją kuriai būtų perduodamas parametras masyvas iš skaičių. 
 // Ir gražinamas masyvas kurio elementai yra padauginti iš 2
 // @example: multipliedArray([1, 2, 3, 4, 5, 6]) ➞ [2, 4, 6, 8, 10, 12]
+
+
+
+
 
 
 // 8. Parašykite f-ją, kuri konvertuotų visus masyvo elementus į stringus
