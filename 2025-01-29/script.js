@@ -38,4 +38,24 @@ const colors = [
 ];
  
 
- 
+ //surasti visas masinas, kurios pasibaigia raide a
+
+ const paieska = "A";
+ const atfiltruotiMasinas = masinos.filter((pavadinimas) => 
+    pavadinimas.toLocaleLowerCase().endsWith(paieska.toLocaleLowerCase()));
+console.log(atfiltruotiMasinas);
+
+const  masinosMazosiomis = masinos.map((pavadinimas) => pavadinimas.toLowerCase());
+console.log(masinosMazosiomis);
+
+// / /3. Jei Šalis prasideda su L arba su U reikšme,
+// reikia šias reikšmes išskirti į naują masyvą. (6 min) (14:10)
+
+const atfiltruotosSalys = countries.filter((salis) =>
+salis.country. startsWith("L")||salis.country. startsWith("U")
+.map((salis) => {
+    countryCode: salis.countryCode.toUpper
+})
+)
+;
+console.log(atfiltruotosSalys);
