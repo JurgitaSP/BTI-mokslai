@@ -106,8 +106,8 @@ function darboUzmokestis(masyvas) {
 
 
 function dvigubai(masyvas) {
-    
-return naujasMasyvas = ((masyvas.toString() + "," + masyvas.toString()).split(" , "));
+    return masyvas.concat(masyvas)
+// return naujasMasyvas = ((masyvas.toString() + "," + masyvas.toString()).split(" , "));
       
 }
 console.log(dvigubai(['Ace', 10, true]));
