@@ -48,14 +48,20 @@ console.log(atfiltruotiMasinas);
 const  masinosMazosiomis = masinos.map((pavadinimas) => pavadinimas.toLowerCase());
 console.log(masinosMazosiomis);
 
-// / /3. Jei Šalis prasideda su L arba su U reikšme,
+
+
+// 3. Jei Šalis prasideda su L arba su U reikšme,
 // reikia šias reikšmes išskirti į naują masyvą. (6 min) (14:10)
 
-const atfiltruotosSalys = countries.filter((salis) =>
-salis.country. startsWith("L")||salis.country. startsWith("U")
-.map((salis) => {
-    countryCode: salis.countryCode.toUpper
-})
-)
-;
+const atfiltruotosSalys = countries
+	.filter(
+		(salis) => salis.country.startsWith("L") || salis.country.startsWith("U")
+	)
+	.map((salis) => {
+		return {
+			saliesKodas: salis.countryCode.toUpperCase(),
+			pavadinimas: salis.country,
+		};
+	});
+
 console.log(atfiltruotosSalys);
