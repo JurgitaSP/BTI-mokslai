@@ -44,6 +44,30 @@ function pridetiSarasoEl() {
     const naujassarasoEl = document.createElement("li");
     naujassarasoEl.innerText = `eilute ${count}`;
     count += 1;
-   sarasoEl.appendChild(naujassarasoEl);
+    sarasoEl.appendChild(naujassarasoEl);
 }
 mygtukoEl.addEventListener("click", pridetiSarasoEl);
+
+//mygtuko paspaudimu pasalinti elementa
+
+const pasalintiElementa = document.getElementById("removeMe");
+const pasalinimoMygtukoEl = document.getElementById("removeButton");
+
+function pasalintiEl() {
+    pasalintiElementa.remove();
+}
+pasalinimoMygtukoEl.addEventListener("click", pasalintiEl);
+
+
+//mygtuko paspaudimu pasalinti visus elementus
+
+const salinamiElementai = document.getElementsByClassName("removeClass");
+const pasalinimoMygtukas = document.getElementById("removeAllButton");
+
+function pasalintiVisus() {
+    for (const elementai of salinamiElementai) {
+        elementai.remove();
+    }
+}
+pasalinimoMygtukas.addEventListener("click", pasalintiVisus);
+
