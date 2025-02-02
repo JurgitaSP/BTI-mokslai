@@ -1,5 +1,6 @@
-const button = document.getElementById("changeTextButton");
+//paspaudus mygtuka pakeisti teksta
 
+const button = document.getElementById("changeTextButton");
 const tekstas = document.getElementById("myElement");
 
 function changeText() {
@@ -7,6 +8,7 @@ function changeText() {
 }
 button.addEventListener("click", changeText);
 
+//mygtuko paspaudimu pakeisti teksto spalva
 
 const spalvosElemntai = document.getElementsByClassName("colorChange");
 const buttonElementas = document.querySelector("#changeColorButton");
@@ -20,31 +22,28 @@ function pakeistiSpalva() {
 
 buttonElementas.addEventListener("click", pakeistiSpalva);
 
+//mygtuko paspaudimu sukurti nauja mygtuka
+
+const createButtonElement = document.querySelector("#createButtonButton");
+const buttonContainerElement = document.querySelector("#buttonContainer");
+
+function sukurtiMygtuka() {
+    const naujas = document.createElement("button");
+    naujas.textContent = "Naujas Mygtukas";
+    buttonContainerElement.appendChild(naujas);
+}
+createButtonElement.addEventListener("click", sukurtiMygtuka);
 
 
-// const createButtonElement = document.querySelector("#createButtonButton");
-// const buttonContainer = document.querySelectorAll("#buttonContainer");
-
-// function sukurtiMygtuka() {
-//     const naujas = document.createElement("button");
-//     naujas.textContent = "naujas Mygtukas";
-//     buttonContainer.appendChild(naujas);
-// }
-// createButtonElement.addEventListener("click", sukurtiMygtuka);
-
-// <ul id="myList"> 
-//   <li>Elemento 1</li>
-// </ul>
-// <button id="addListItemButton">Pridėti sąrašo elementą</button>  
-
+//mygtuko paspaudimu prideti elementa
 const sarasoEl = document.querySelector("#myList");
 const mygtukoEl = document.querySelector("#addListItemButton");
 let count = 1;
 
-function pridetiSarasoEl(){
+function pridetiSarasoEl() {
     const naujassarasoEl = document.createElement("li");
     naujassarasoEl.innerText = `eilute ${count}`;
     count += 1;
-    sarasoEl.appendChild(naujassarasoEl);
+   sarasoEl.appendChild(naujassarasoEl);
 }
-sarasoEl.addEventListener("click", pridetiSarasoEl);
+mygtukoEl.addEventListener("click", pridetiSarasoEl);
