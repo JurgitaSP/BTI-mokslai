@@ -85,10 +85,7 @@ function sukeisti(){
 }
 paveiksliukoKeitimoBtn.addEventListener("click", sukeisti);
 
-// {/* <form id="myForm">
-//         <input type="text" placeholder="Įveskite tekstą" required>
-//         <button type="submit">Pateikti</button>
-//     </form> */}
+
 
 const myForm = document.getElementById("myForm");
 // console.log(myForm);
