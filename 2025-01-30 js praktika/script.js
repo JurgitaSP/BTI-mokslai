@@ -96,5 +96,6 @@ function addName(event){
 event.preventDefault();
 const userInput = document.getElementById("name").value;
 alert("forma pateikta " + userInput);
-}
+document.getElementById("name").value = "";
+    }
 myForm.addEventListener("submit", addName);
