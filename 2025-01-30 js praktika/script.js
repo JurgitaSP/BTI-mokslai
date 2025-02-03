@@ -63,11 +63,38 @@ pasalinimoMygtukoEl.addEventListener("click", pasalintiEl);
 
 const salinamiElementai = document.getElementsByClassName("removeClass");
 const pasalinimoMygtukas = document.getElementById("removeAllButton");
+// console.log(salinamiElementai);
 
 function pasalintiVisus() {
-    for (const elementai of salinamiElementai) {
-        elementai.remove();
-    }
+for (let i = salinamiElementai.length -1; i >= 0; i--){
+    salinamiElementai[i].remove();
+}
+    
 }
 pasalinimoMygtukas.addEventListener("click", pasalintiVisus);
 
+//mygtuko paspaudimu sukeisti paveiksliukus
+
+const paveiksliukoElement = document.getElementById("myImage");
+const paveiksliukoKeitimoBtn = document.getElementById("changeSrcButton");
+// console.log(paveiksliukoElement);
+// console.log(paveiksliukoKeitimoBtn);
+
+function sukeisti(){
+    paveiksliukoElement.setAttribute("src", "./img/js.jpg")
+}
+paveiksliukoKeitimoBtn.addEventListener("click", sukeisti);
+
+// {/* <form id="myForm">
+//         <input type="text" placeholder="Įveskite tekstą" required>
+//         <button type="submit">Pateikti</button>
+//     </form> */}
+
+const myForm = document.getElementById("myForm");
+// console.log(myForm);
+function addName(event){
+event.preventDefault();
+const userInput = document.getElementById("name").value;
+alert("forma pateikta " + userInput);
+}
+myForm.addEventListener("submit", addName);
