@@ -15,6 +15,16 @@ const prekes = [
 // kiekvienos prekės barkodą. Barkodai prasideda pirmąja prekės pavadinimo raide 
 // ir atskiriamas brūkšneliu, pvz: D-4061615651 (degtukai).
 // Rezultatą console.log’inkite
+
+
+
+
+
+
+
+
+
+
 // 2 Užduotis: Išfiltruokite prekes, kurios prasideda pirmąja raide 'D'. 
 // Rezultate turi likti 2 prekės: ‘Degtukai’ ir ‘Dantų šepetėlis’. Rezultatą 
 // console.log’inkite
