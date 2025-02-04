@@ -7,9 +7,43 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <input type="text" placeholder="iveskite skaiciu">
-    <button>submit</button>
-    <div>rezultatas</div>
+    <div class="screen">
+        <div class="board">
+          <header class="board-header">
+            <div class="img-box">
+              <img src="./assets/img/logo.png" width="" alt="" />
+            </div>
+            <div id="win" class="win">
+              <img src="./assets/img/win.gif" alt="" id="" />
+            </div>
+          </header>
+          <div class="board-area">
+            <div class="area-game">
+              <button id="startBtn" class="start-btn">Start game</button>
+              <div class="form-box" id="formBox">
+                <div id="errorMsg" class="errorMsg"></div>
+                <div id="infoMsg" class="infoMsg"></div>
+                <form id="myForm" class="myForm">
+                  <input
+                    type="number"
+                    class="number"
+                    id="number"
+                    placeholder="Your guess"
+                    oninput="validateInput()"
+                  />
+                  <button type="submit" class="submit-btn" id="submit">
+                    I guess
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="area-info">
+              <div class="history-list" id="history-list"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
 
 
     <script src="./script.js"></script>

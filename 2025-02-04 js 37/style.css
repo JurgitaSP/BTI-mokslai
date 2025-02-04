@@ -1,4 +1,9 @@
-div>input {
-    
-    margin: 50px;
+button {
+    padding: 10px 30px;
+    background-color: aqua;
+    border-radius: 8px;
+}
+input {
+    padding: 10px 20px;
+    border-radius: 8px;
 }
