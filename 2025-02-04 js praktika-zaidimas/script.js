@@ -25,3 +25,10 @@
 // • Pritaikymas: Suteikite žaidėjui galimybę pasirinkti, iki kokio 
 // skaičiaus programa galvos skaičių (pvz., iki 10, iki 100 ar iki 
 // 1000)
+
+const startBtn = 
+
+
+function rand(min, max){
+    return Math.floor(Math.random() * (max - min +1)) + min;
+}
