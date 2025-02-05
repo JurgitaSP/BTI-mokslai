@@ -23,10 +23,10 @@ const idNumberElement = document.getElementById("idNumber");
 const buttonElement = document.getElementById("button");
 const dataElement = document.getElementById("data");
 
-const newGuess = document.createElement('p');
-addEventListener("change", (event) => {});
 
-onchange = (event) => {};
+dataElement.addEventListener("click", showTime);
+
+
 
 function showTime(){
     buttonElement.addEventListener("click", new Date);
