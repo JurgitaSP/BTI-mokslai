@@ -38,6 +38,7 @@ DOM.uzduotiesPridejimoMygtukas.addEventListener("click", ()=>{
      const reiksme = DOM.uzduotiesPridejimoLaukelis.value;
     if(reiksme.length >= 5){
         uzduotys.push({title: reiksme, isFinished: false});
+        rodytiUzduotis();
     }
        else alert("uzduoties pavadinimas turetu buti ne trumpesnis nei 5 simboliai");
     
@@ -64,8 +65,11 @@ pabaigtosUzduotys.forEach((pabaigtaUzduotis)=>{
     <button>Istrinti</button>`;
 
 });
-console.log(nepabaigtuUzduociuHtml);
-console.log(pabaigtuUzduociuHtml);
+
  DOM.nepabaigtuUzduociuSarasas.innerHTML = nepabaigtuUzduociuHtml;
  DOM.pabaigtuUzduociuSarasas.innerHTML = pabaigtuUzduociuHtml;
+}
+
+function istrintiUzduoti(title){
+
 }
