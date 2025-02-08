@@ -27,10 +27,7 @@ const DOM = {
     nepabaigtuUzduociuSarasas: document.getElementById("tasks-active"),
     pabaigtuUzduociuSarasas: document.getElementById("tasks-finished"),
 };
-const uzduotys = [{
-    title: "pabaigta uzduotis",
-    isFinished: true,
-}];
+const uzduotys = gautiIssaugotasUzduotisIsLocalStorage();
 
 rodytiUzduotis();
 
@@ -38,6 +35,7 @@ DOM.uzduotiesPridejimoMygtukas.addEventListener("click", () => {
     const reiksme = DOM.uzduotiesPridejimoLaukelis.value;
     if (reiksme.length >= 5) {
         uzduotys.push({ title: reiksme, isFinished: false });
+        issaugotiUzduotisLocalStorage();
         rodytiUzduotis();
     }
     else alert("uzduoties pavadinimas turetu buti ne trumpesnis nei 5 simboliai");
@@ -81,6 +79,8 @@ function istrintiUzduoti(title) {
         //paskuti elementa
         uzduotys.splice(uzduotiesIndeksas, 1);
         rodytiUzduotis();
+        issaugotiUzduotisLocalStorage();
+
     }
     else console.error("Trinamos uzduoties pavadinimas uzduociu masyve buvo nerastas");
 }
@@ -95,5 +95,22 @@ function pabaigtiUzduoti(title){
         uzduotis.isFinished === false);
 
 uzduotis.isFinished = true;
+issaugotiUzduotisLocalStorage();
 rodytiUzduotis();
+}
+
+function issaugotiUzduotisLocalStorage(){
+localStorage.setItem("bandymas", JSON.stringify(uzduotys));
+}
+
+//gauti issaugotas uzduotis localStorage
+function gautiIssaugotasUzduotisIsLocalStorage(){
+    const visosUzduotys = localStorage.getItem("bandymas");//grazina arba string arba null (jei nerado)
+    if(!visosUzduotys) return [];//jei nera uzduociu arba blogai nurodem rakta, grazina tuscia masyva
+    const uzduociuMasyvas = JSON.parse(visosUzduotys);
+    return uzduociuMasyvas;
+
+    // ternary operatorius - atiduoda reiksme uz klaustuko, 
+    // salyga ? reiksme jei tiesa : reiksme jei melas
+    // return !visosUzduotys ? [] : JSON.parse(visosUzduotys);
 }
