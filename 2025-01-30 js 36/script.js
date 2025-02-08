@@ -91,8 +91,8 @@ function istrintiUzduoti(title) {
 // 4. atnaujinti uzduoties statusa
 function pabaigtiUzduoti(title){
     const uzduotis = uzduotys.find(
-        (uzduotis) => title.toLowerCase() == uzduotis.title.toLowerCase())&&
-        uzduotis.isFinished === false;
+        (uzduotis) => title.toLowerCase() == uzduotis.title.toLowerCase()&&
+        uzduotis.isFinished === false);
 
 uzduotis.isFinished = true;
 rodytiUzduotis();
