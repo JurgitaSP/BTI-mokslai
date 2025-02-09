@@ -17,22 +17,15 @@
 // Po forma esančio mygtuko pagalba užfiksuokite, kada įvyko check-in (datą ir laiką) 
 // bei išsaugokite objektą į bendrą sąrašą localStorage (tariamam tolimesniam 
 //     panaudojimui kituose programos vystymo etapuose)
-const nameElement = document.getElementById("name");
-const lastNameElement = document.getElementById("lastName");
-const idNumberElement = document.getElementById("idNumber");
-const buttonElement = document.getElementById("button");
-const dataElement = document.getElementById("data");
 
+const leistiniSimboliai = "qwertyuiopasdfghjklzxcvbnm";
 
-dataElement.addEventListener("click", showTime);
-
-
-
-function showTime(){
-    buttonElement.addEventListener("click", new Date);
-}
-console.log(showTime)
-
-document.querySelector("input").addEventListener("change", (event) => {
+document.querySelectorAll("input").addEventListener("change", (event) => {
 	console.log("Įvesta įvesties laukelio reikšmė");
 });
+
+
+
+
+
+
