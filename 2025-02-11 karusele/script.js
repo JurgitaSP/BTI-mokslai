@@ -2,6 +2,8 @@ const slides = document.querySelectorAll(".card");
 const totalSlides = slides.length; //slaido ilgis-korteles
 const prev = document.getElementById("prev");
 const next = document.getElementById("next");
+const dots = document.querySelectorAll(".dot");
+const slider = document.getElementById('slider');
 
 let slideIndex = 0;
 let slideInterval; //laiko intervalui
@@ -15,6 +17,7 @@ startSlider();//iskvieciam auto slideri
 function showSlides(index) {
     slides.forEach((slide, i) => {
         slide.classList.toggle("active", i === index)//jei slaido indeksas lygus, uzd active
+       dots[i].style.opacity = i === index ? '1':'0.3';
     });
 }
 // showSlides(0); rodo slaidus pagal pasirinkta indeksa
@@ -52,7 +55,7 @@ prev.addEventListener("click", () => {
     showSlides(slideIndex);
     startSlider();
 
-})
+});
 next.addEventListener("click", () => {
     stopSlider();
     slideIndex++;
@@ -62,4 +65,17 @@ next.addEventListener("click", () => {
     showSlides(slideIndex);
     startSlider();
 
-})
+});
+
+dots.forEach((dot, i)=> {
+    dot.addEventListener("click", ()=>{
+        stopSlider();
+        slideIndex = i; //slaido indeksa prilyginam taskelio indeksui
+        showSlides(slideIndex);
+        startSlider();
+
+    })
+});
+
+slider.addEventListener("mouseover", stopSlider);
+slider.addEventListener("mouseleave", startSlider);
