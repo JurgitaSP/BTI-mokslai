@@ -1,6 +1,7 @@
 const slides = document.querySelectorAll(".card");
 const totalSlides = slides.length; //slaido ilgis-korteles
-
+const prev = document.getElementById("prev");
+const next = document.getElementById("next");
 
 let slideIndex = 0;
 let slideInterval; //laiko intervalui
@@ -35,3 +36,30 @@ function autoSlide() {
 function startSlider() { //automatinis sukimasis
     slideInterval = setInterval(autoSlide, 3000); //iskviecia auto slida ir suka kas 3 sek
 }
+
+//fu-ja slaiderios sustabdymui
+function stopSlider(){
+    clearInterval(slideInterval);
+}
+
+
+prev.addEventListener("click", () => {
+    stopSlider();
+    slideIndex--;
+    if (slideIndex < 0) {
+        slideIndex = totalSlides - 1;
+    }
+    showSlides(slideIndex);
+    startSlider();
+
+})
+next.addEventListener("click", () => {
+    stopSlider();
+    slideIndex++;
+    if (slideIndex >= totalSlides) { //kodel
+        slideIndex = 0;
+    }
+    showSlides(slideIndex);
+    startSlider();
+
+})
