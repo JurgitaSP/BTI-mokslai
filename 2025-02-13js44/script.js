@@ -49,9 +49,20 @@ class Zmogus {
     }
 }
 const planeta = new Zmogus();  //sukurtas objektas pagal sablona
-// console.log(planeta);
+console.log(planeta);
  planeta.lastName = "zmogus"; ///jei norim pakeisti objekto lauku pav.
 planeta.pasakytiLabas();
 const jonas = new Zmogus();
 jonas.pasakytiLabas();
 console.log(planeta);
+
+class Planeta {
+    constructor(name="earth", satelite="moon", age=5){ //cia rasomi default parametru reiksmes
+        this.name = name;
+        this.satelite = satelite;
+        this.age = age;
+    }
+}
+const planeta1 = new Planeta("uranus", "mars", 13); ///cia rasomi paduodami parametru reiksmes
+// planeta1.age = 8;
+console.log(planeta1);
