@@ -64,5 +64,52 @@ class Planeta {
     }
 }
 const planeta1 = new Planeta("uranus", "mars", 13); ///cia rasomi paduodami parametru reiksmes
+const planeta2 = new Planeta("venus","", 1); ///cia rasomi paduodami parametru reiksmes
+const planeta3 = new Planeta();
 // planeta1.age = 8;
 console.log(planeta1);
+console.log(planeta2);
+console.log(planeta3);
+
+class Staciakampis{
+    //klases privaciu lauku apibrezimas
+    #plotis;
+    #aukstis; //privatus langeliai, kuriu uz klases ribu keisti negalima/neleidziama
+    #plotas;
+    constructor(plotis, aukstis, matavimoVienetas = "m")
+    {
+        this.#plotis = plotis;
+        this.#aukstis = aukstis;
+        this.matavimoVienetas = matavimoVienetas;
+        this.#plotas = plotis * aukstis;
+    }
+    setAukstis(naujasAukstis){  //vienas is budu pakeisti objk parametru reiksmes
+        this.#aukstis = naujasAukstis;
+        this.#plotas = naujasAukstis * this.#plotis;
+    }
+    get plotis(){
+        return this.#plotis; ///atiduodama kaip paramentras
+    }
+    get aukstis(){
+        return this.#aukstis;
+    }
+    get plotas(){
+        return `${this.#plotas}${this.matavimoVienetas}2`;
+    }
+    set plotis(naujasPlotis){     //budas kaip pakeisti inkapsuliuotas reiksmes
+        this.#plotis = naujasPlotis;
+        this.#plotas = naujasPlotis * this.#aukstis;
+    }
+    set aukstis(naujasAukstis){
+        this.#aukstis = naujasAukstis;
+        this.#plotas = naujasAukstis * this.#plotis;
+    }
+}
+const stk1 = new Staciakampis(10, 6, "cm");
+console.log(stk1.plotas);
+stk1.setAukstis(8);
+console.log(stk1.plotis);
+
+console.log(stk1);
+//geteriai - atiduoda privaciiu laukeliu reiksme
+//seteriai - neiseina uz klases ribos
