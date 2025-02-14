@@ -95,3 +95,5 @@ console.log(countDigits(-12));
 // intervale. Armstongo skaičiaus pvz ABC = A3 + B3 + C3 (visų
 // atskirų skaitmenų pakeltų skaičiaus skaitmenų kiekio laipsniu suma.)
 //
+
+
