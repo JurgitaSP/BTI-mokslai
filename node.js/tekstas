@@ -1,0 +1,40 @@
+NodeJS
+CTRL + ` - įjungia terminalą
+
+KOMANDOS:
+pwd  	- parodo direktoriją, kurioje šiuo metu esame terminale
+cd <lokacija>	- keičia direktoriją
+ls		- parodo aplanko turinį (aplankai ir failai)
+node programa.js  - paleidžia JavaScript failą su NodeJS
+npm init	- projekto inicializavimas
+npm init -y     - projekto inicializavimas su default reiskmemis
+cwd - parodo projekto kelia
+process.env - vieta likyti prisijungimus prie duombaziu
+Path moduli reikia importuoti
+path.dirname rodo/sukuria kelia ir validuoja ar jis geras(blogu nerodo)
+path.join() sukuria kelia, netaiko jokiu validaciju, leidzia itraukti belekokius failus
+path.normalize - normalizuoja kelia, jei jis gaunamas "blogas" is IPA, pataiso ji
+path.isAbsolute - ar tai yra absoliutus kelias
+
+Node.js failu sistema - i failu sistema galima kreiptis dviem budais - sinchroiniu ie asinchroniniu
+1.Importuojam failu sistema is fs su node
+2.fs.writeFileSync(kelias, tekstas) -sukuria faila, perraso jau egzistuojanti visa jo turini
+
+
+\n - nauja eilute
+\t - tabuliacine zyma
+fs.appendFileSync() - ne tik sukuria faila, bet ir ji papildo 
+fs.readFileSync('log.txt')  failo perskaitymas (is pradziu gaunamas buffer, tada verciame i texta su String)
+
+fs.unlinkSync('failas.txt'); trina failus
+fs.rmdirSync(); - trina katalogus
+fs.renameSync() - pervadina faila ir perkelia fs
+
+asinchronines fs
+failo sukurimas
+
+fs.writeFile("failas.text", "Hi", function(err){
+    if(err)console.log(err);
+    else console.log("Saved!");
+    });
+console.log("Programa baige savo darba");
