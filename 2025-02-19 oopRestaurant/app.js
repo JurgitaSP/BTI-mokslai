@@ -13,6 +13,8 @@ const iceCream = new Dish("Ledai", 5.5, dessert);
 const cake = new Dish("Tortas", 15, dessert, "sokoladinis");
 console.log(dessert);
 iceCream.setPrice(6);
+console.log(`Viso sukurta ${Dish.dishCounter}`);
+
 
 console.log(iceCream.getInfo());
 

@@ -5,14 +5,19 @@ class Dish {
     #description;
     #category; //klases category objkt
 
+    static dishCounter = 0; //patiekalu skaiciuotojas, skaiciuoja sitos klases objektus, susije tik su klase
+    // static allDishes = [];
+
     //konstruktorius -f-ja pasileidzia automtiskai, kuriant nauja
     // egzmpl. sitos klases Dish
     constructor(name, price, category, description = 'Nera aprasymo') {
+        Dish.dishCounter++; //kuriant naujus objektus skaiciuos
         this.#name = name;
         this.#price = price;
         this.#description = description;
         this.#category = category;
         category.addDish(this);
+        // Dish.allDishes.push(this);
     }
     //geteriai
     getName() {
