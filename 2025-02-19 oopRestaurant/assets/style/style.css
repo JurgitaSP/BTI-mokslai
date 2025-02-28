@@ -19,3 +19,32 @@
     align-items: top;
     padding: 30px;
 }
+
+.sidebar {
+    width: 200px;
+    min-height: 90vh;
+    border-right: 1px solid white;
+}
+
+.nav {
+    padding-top: 30px;
+}
+
+.menu-btn {
+    padding: 20px 0;
+    color: white;
+    cursor: pointer;
+    border-bottom: solid 1px white;
+}
+
+.menu-btn:hover {
+    color: greenyellow;
+}
+
+.main {
+    width: calc(100% - 200px);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

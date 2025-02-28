@@ -1,27 +1,46 @@
-class Category{
-#categoryName;
-#dishesList;
+import Menu from './Menu.js';
+class Category {
+    
+    #id;
+    #categoryName;
+    #dishesList;
 
-constructor(name){
-    this.#categoryName = name;
-    this.#dishesList = [];
-}
+    static categoryCounter =0;
+    
+    
+    constructor(name, menu){
+        Category.categoryCounter++;
+        
+        this.#id = Category.categoryCounter;
+        this.#categoryName = name;
+        this.#dishesList = [];
 
-getCategoryName(){
-    return this.#categoryName;
-}
+        if(menu instanceof Menu){
+            menu.addCategory(this);
+        } else {
+            throw new Error('pateiktas parametras nepriklauso Menu klasei');
+        }
+    }
 
-getDishesList(){
-    return this.#dishesList;
-}
+    getId(){
+        return this.#id;
+    }
 
-setCategoryName(newName){
-    this.#categoryName = newName;
-}
-addDish(dish){
-    this.#dishesList.push(dish);
-}
+    getCategoryName(){
+        return this.#categoryName;
+    }
 
-}
+    getDishesList(){
+        return this.#dishesList;
+    }
 
-export default Category
+    setCategoryName(newName){
+        this.#categoryName = newName;
+    }
+
+    addDish(dish){
+        this.#dishesList.push(dish);
+        Category.dishCounter++;
+    }
+}
+export default Category;
